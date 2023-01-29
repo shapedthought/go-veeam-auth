@@ -23,7 +23,7 @@ NOTE: This is an open source project with no association with Veeam and is suppl
 
         // Set the IP and username
         address := "192.168.0.106"
-        userName := "administrator@virtualsynthetic.co.uk"
+        userName := "administrator@yourdomain.co.uk"
 
         // Skip TLS verification, this is required if you are using self-signed certificates
         tr := &http.Transport{
@@ -38,7 +38,7 @@ NOTE: This is an open source project with no association with Veeam and is suppl
 
         // use the BuildRequestUrl to construct the URL string for the request you want to make
         endPoint := "jobs"
-        cs := gva.BuildRequestUrl(a, endPoint, profile)
+        cs := gva.BuildRequestUrl(address, endPoint, profile)
 
         // Create your request
         r, err := http.NewRequest("GET", cs, nil)
