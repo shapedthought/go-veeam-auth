@@ -123,7 +123,7 @@ You will need to set up a request to send the calls you want to make, but to mak
         log.Fatal(err)
     }
 
-    // use the MakeHeaders method to add the headers for you
+    // use the AddHeaders method to add the headers for you
     gva.AddHeaders(r, profile, token)
 
 The function takes the Request pointer, the Profile struct and the Token struct.
